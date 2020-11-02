@@ -17,6 +17,7 @@ nav:
   home: /
   # about: /about/
   articles: /posts/
+  tag: /tags/
   search: /search/
 
 # Links to your social media accounts.
