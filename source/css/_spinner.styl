@@ -1,0 +1,15 @@
+#header #logo.spinner,
+.spinner
+  cursor: pointer
+  border-radius: 100%
+  animation: spin 1.0s linear infinite
+
+#header #logo.paused
+.paused
+  animation-play-state: paused
+
+@keyframes spin
+  from
+    transform: rotate(0deg);
+  to
+    transform: rotate(360deg);

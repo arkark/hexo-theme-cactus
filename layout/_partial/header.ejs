@@ -1,9 +1,13 @@
 <header id="header">
-  <a href="<%- url_for("/") %>">
   <% if (theme.logo && theme.logo.enabled) { %>
     <% if (theme.gravatar && (theme.gravatar.email || theme.gravatar.hash) && theme.logo.gravatar) { %>
       <% if (theme.gravatar.email) { %>
-        <div id="logo" style="background-image: url(<%- gravatar(theme.gravatar.email) %>);"></div>
+        <div
+          id="logo"
+          class="spinner paused"
+          style="background-image: url(<%- gravatar(theme.gravatar.email) %>);"
+          onclick="this.classList.toggle('paused');"
+        ></div>
       <% } else { %>
         <div id="logo" style="background-image: url(https://www.gravatar.com/avatar/<%= theme.gravatar.hash %>);"></div>
       <% } %>
@@ -11,6 +15,7 @@
       <div id="logo" style="background-image: url(<%- url_for(theme.logo.url) %>);"></div>
     <% } %>
   <% } %>
+  <a href="<%- url_for("/") %>">
     <div id="title">
       <h1><%= config.title %></h1>
     </div>
